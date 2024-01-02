@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Finder", "Finder\Finder.csproj", "{7F1725A1-2685-4FA2-8F3F-56DEB7A5E0CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Finder", "Finder\Finder.csproj", "{7F1725A1-2685-4FA2-8F3F-56DEB7A5E0CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Finder.Test", "Finder.Test\Finder.Test.csproj", "{DFBEC700-257B-4BE0-AD76-F20BECBBCEA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7F1725A1-2685-4FA2-8F3F-56DEB7A5E0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F1725A1-2685-4FA2-8F3F-56DEB7A5E0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F1725A1-2685-4FA2-8F3F-56DEB7A5E0CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFBEC700-257B-4BE0-AD76-F20BECBBCEA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFBEC700-257B-4BE0-AD76-F20BECBBCEA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFBEC700-257B-4BE0-AD76-F20BECBBCEA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFBEC700-257B-4BE0-AD76-F20BECBBCEA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

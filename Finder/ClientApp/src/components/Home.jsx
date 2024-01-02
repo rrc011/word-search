@@ -7,11 +7,7 @@ const Home = () => {
   const [word, setWord] = React.useState('')
 
   React.useEffect(() => {
-    if (matrix.words.length === 0) {
-      generate();
-    } else {
-      loadMatrix();
-    }
+    loadMatrix();
   }, [])
 
   const loadMatrix = async () => {

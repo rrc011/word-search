@@ -8,13 +8,22 @@ namespace Finder.Repository
         private static readonly Random random = new Random();
         private static AlphabetSoupResultDto soup = new AlphabetSoupResultDto();
 
+        public WordFinder()
+        {
+        }
+
+        public WordFinder(AlphabetSoupResultDto input)
+        {
+            soup = input ?? new AlphabetSoupResultDto();
+        }
+
         public AlphabetSoupResultDto GetMatrix() => soup;
 
         public AlphabetSoupResultDto GenerateMatrix(int matrixLength)
         {
             List<string> validWords;
-            string contenidoJson = File.ReadAllText("valid_words.json");
-            validWords = JsonSerializer.Deserialize<List<string>>(contenidoJson);
+            string contentJson = File.ReadAllText("valid_words.json");
+            validWords = JsonSerializer.Deserialize<List<string>>(contentJson);
 
             char[,] matrix = new char[matrixLength, matrixLength];
 
@@ -93,7 +102,11 @@ namespace Finder.Repository
         public bool FindAndMatch(List<LetterDto> word)
         {
             string wordStr = string.Join("", word.Select(x => x.Name));
-            soup.Words.Find(x => x.Name == wordStr).Selected = true;
+            var wordFound = soup.Words.Find(x => x.Name == wordStr);
+
+            if (wordFound != null) wordFound.Selected = true;
+            else return false;
+
             foreach (var row in soup.Matrix)
             {
                 foreach (var letter in row)
